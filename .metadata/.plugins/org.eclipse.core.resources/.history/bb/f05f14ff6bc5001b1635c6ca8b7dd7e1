@@ -1,0 +1,72 @@
+
+public class ArvoreBin {
+
+	public enum ModoRL {
+		esqueda, direita;
+	}
+
+	private Elemento arvore;
+
+	public Elemento getArvore() {
+		return this.arvore;
+	}
+
+	public void setArvore(Elemento arvore) {
+		this.arvore = arvore;
+	}
+
+	// raiz da arvore
+
+	public ArvoreBin(String raiz) {
+		setArvore(new Elemento(raiz));
+	}
+
+	public void AdicionarElemento(String elementoPai, String nomeElemento, ModoRL modo) {
+
+		if (modo == ModoRL.direita) {
+			AdicionarElemento(elementoPai, nomeElemento, modo);
+		} else {
+			if (modo == ModoRL.esqueda) {
+				AdicionarElemento(elementoPai, nomeElemento, modo);
+			}
+		}
+	}
+
+	private Elemento findNode(Elemento elemento, String nome) {
+		if (elemento == null || nome == null || nome.isEmpty()) {
+			return null;
+		}
+		if (elemento.getNome().equals(nome)) {
+			return elemento;
+		}
+
+		Elemento elementoEsquerda = findNode(elemento.getEsquerda(), nome);
+		if (elementoEsquerda != null) {
+			return elementoEsquerda;
+		}
+		return findNode(elemento.getDireita(), nome);
+	}
+
+	public void AdicionarElementoEsquerda(String elementoPai, String nomeElemento) {
+		Elemento novoElemento = findNode(getArvore(), elementoPai);
+		if (novoElemento == null) {
+			return;
+		}
+		novoElemento.setEsquerda(new Elemento(nomeElemento));
+	}
+	
+	public void AdicionarElementoDireita(String elementoPai, String nomeElemento) {
+		Elemento novoElemento = findNode(getArvore(), elementoPai);
+		if(novoElemento == null) {
+			return;
+		}
+		novoElemento.setDireita(new Elemento(nomeElemento));
+	}
+	
+	private void nullnodes(Elemento elemento) {
+		if(elemento == null) {
+			return;
+		}
+		
+	}
+}

@@ -1,0 +1,42 @@
+
+public class ArvoreBin {
+
+	public enum ModoRL {
+		esqueda, direita;
+	}
+
+	private Elemento arvore;
+
+	public Elemento getArvore() {
+		return this.arvore;
+	}
+
+	public void setArvore(Elemento arvore) {
+		this.arvore = arvore;
+	}
+
+	// raiz da arvore
+
+	public ArvoreBin(String raiz) {
+		setArvore(new Elemento(raiz));
+	}
+
+	public void AdicionarElemento(String elementoPai, String nomeElemento, ModoRL modo) {
+
+		if (modo == ModoRL.direita) {
+			AdicionarElemento(elementoPai, nomeElemento, modo);
+		} else {
+			if (modo == ModoRL.esqueda) {
+				AdicionarElemento(elementoPai, nomeElemento, modo);
+			}
+		}
+	}
+	
+	
+	public void AdicionarElementoEsquerda(String elementoPai, String nomeElemento) {
+		Elemento novoElemento = findNode(getArvore(), elementoPai);
+		if(elemento == null) {
+			
+		}
+	}
+}

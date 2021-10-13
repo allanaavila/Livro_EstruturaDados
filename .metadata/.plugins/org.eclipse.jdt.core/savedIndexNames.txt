@@ -1,0 +1,10 @@
+INDEX VERSION 1.131+/Users/allana/Livro_EstruturaDeDados/.metadata/.plugins/org.eclipse.jdt.core
+1906575153.index
+1701923963.index
+2584519345.index
+3542743926.index
+1584535551.index
+302792443.index
+290521234.index
+3692639843.index
+894307532.index

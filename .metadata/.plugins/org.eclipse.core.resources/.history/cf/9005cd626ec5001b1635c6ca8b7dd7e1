@@ -1,0 +1,15 @@
+import ArvoreBin.binary.ArvoreBin;
+import arvore.binary.ArvoreBin.ModoRL;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("-----------------------------------------");
+		ArvoreBin arvore = new ArvoreBin("A");
+
+		arvore.AdicionarElemento("A", "B", ModoRL.esquerda);
+	
+
+	}
+
+}

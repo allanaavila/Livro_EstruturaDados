@@ -1,0 +1,17 @@
+
+public class ArvoreBin {
+	
+	private Elemento arvore;
+
+	public Elemento getArvore() {
+		return this.arvore;
+	}
+
+	public void setArvore(Elemento arvore) {
+		this.arvore = arvore;
+	}
+	
+	
+	//insercao em arvore binaria
+	
+}

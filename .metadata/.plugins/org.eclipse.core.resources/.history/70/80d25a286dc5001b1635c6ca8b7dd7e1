@@ -1,0 +1,29 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		 System.out.println("-----------------------------------------");
+	        ArvoreBin arvore = new ArvoreBin("A");
+	         
+	        arvore.AdicionarNo("A","B", ModoRL.esquerda);
+	        arvore.AdicionarNo("B", "D", ModoRL.esquerda);
+	        arvore.AdicionarNo("A", "C", ModoRL.direita);
+	        arvore.AdicionarNo("C", "E", ModoRL.esquerda);
+	        arvore.AdicionarNo("E", "G", ModoRL.direita);
+	        arvore.AdicionarNo("C", "F", ModoRL.direita);
+	        arvore.AdicionarNo("F", "H", ModoRL.esquerda);
+	        arvore.AdicionarNo("F", "I", ModoRL.direita);
+	         
+	        System.out.println("PreOrdem (RED): " + arvore.PreOrdem());
+	        System.out.println("InOrdem (ERD): " + arvore.InOrdem());
+	        System.out.println("PosOrdem (EDR): " + arvore.PosOrdem());
+	        System.out.println("-----------------------------------------");
+	         
+	        arvore.clear("F");
+	         
+	        
+	        
+
+	}
+
+}

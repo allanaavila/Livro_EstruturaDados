@@ -1,0 +1,10 @@
+
+public class ArvoreBin {
+	
+	// insercao em arvore binaria
+	
+	public void inserir(Elemento elemento, int valor) {
+		
+	}
+
+}

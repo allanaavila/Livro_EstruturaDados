@@ -1,0 +1,47 @@
+
+public class ArvoreBin {
+	
+	private Elemento arvore;
+
+	public Elemento getArvore() {
+		return this.arvore;
+	}
+
+	public void setArvore(Elemento arvore) {
+		this.arvore = arvore;
+	}
+	
+	
+	//exclusao em arvore binaria
+	
+	public Elemento removeValorMinimoDaArvore(Elemento elemento) {
+		if(elemento == null) {
+			System.out.println("ERRO");
+		}
+		else
+			if(elemento.getEsquerda() != null) {
+				elemento.setEsquerda(removeValorMinimoDaArvore(elemento.getEsquerda()));
+				return elemento;
+			}
+			else {
+				return elemento.getDireita();
+			}
+		return null;
+	}
+	
+	//insercao na arvore binaria
+	public void inserir(Elemento elemento, int valor) {
+		if(elemento != null) {
+			if(valor < elemento.valor) {
+				if(elemento.getEsquerda() != null) {
+					inserir(elemento.getEsquerda(), valor);
+				}
+				else {
+					System.out.println("Inserindo " + valor + " a esquerda de  " + elemento.valor);
+					elemento.valor = new Elemento(valor); 
+				}
+			}
+		}
+	}
+	
+}
